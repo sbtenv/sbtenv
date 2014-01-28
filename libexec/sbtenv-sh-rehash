@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+set -e
+test -n "${SBTENV_DEBUG}" && set -x
+
+# Provide sbtenv completions
+if [ "${1}" = "--complete" ]; then
+  exec sbtenv-rehash --complete
+fi
+
+shell="$(basename "${SBTENV_SHELL:-${SHELL}}")"
+
+# When sbtenv shell integration is enabled, delegate to sbtenv-rehash,
+# then tell the shell to empty its command lookup cache.
+sbtenv-rehash
+
+case "${shell}" in
+* )
+  echo "hash -r 2> /dev/null || true"
+  ;;
+esac

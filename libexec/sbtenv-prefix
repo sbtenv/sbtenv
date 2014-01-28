@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+# Summary: Display prefix for a sbt version
+# Usage: sbtenv prefix [<version>]
+#
+# Displays the directory where a sbt version is installed. If no
+# version is given, `sbtenv prefix` displays the location of the
+# currently selected version.
+
+set -e
+test -n "${SBTENV_DEBUG}" && set -x
+
+# Provide sbtenv completions
+if [ "${1}" = "--complete" ]; then
+  echo system
+  exec sbtenv-versions --bare
+fi
+
+if [ -n "${1}" ]; then
+  export SBTENV_VERSION="${1}"
+elif [ -z "${SBTENV_VERSION}" ]; then
+  SBTENV_VERSION="$(sbtenv-version-name)"
+fi
+
+if [ "${SBTENV_VERSION}" = "system" ]; then
+  if SCALA_PATH="$(sbtenv-which scala 2> /dev/null)"; then
+    SCALA_PATH="${SCALA_PATH%/*}"
+    echo "${SCALA_PATH%/bin}"
+    exit
+  else
+    echo "sbtenv: system version not found in PATH" >& 2
+    exit 1
+  fi
+fi
+
+SBTENV_PREFIX_PATH="${SBTENV_ROOT}/versions/${SBTENV_VERSION}"
+if [ ! -d "${SBTENV_PREFIX_PATH}" ]; then
+  echo "sbtenv: version \`${SBTENV_VERSION}\` not installed" >& 2
+  exit 1
+fi
+
+echo "${SBTENV_PREFIX_PATH}"
+

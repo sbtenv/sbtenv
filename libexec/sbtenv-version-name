@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+# Summary: Show the current sbt version
+
+set -e
+test -n "${SBTENV_DEBUG}" && set -x
+
+if [ -z "${SBTENV_VERSION}" ]; then
+  SBTENV_VERSION_FILE="$(sbtenv-version-file)"
+  SBTENV_VERSION="$(sbtenv-version-file-read "${SBTENV_VERSION_FILE}" || true)"
+fi
+
+if [ -z "${SBTENV_VERSION}" ] || [ "${SBTENV_VERSION}" = "system" ]; then
+  echo "system"
+  exit
+fi
+
+version_exists() {
+  local version="${1}"
+  test -d "${SBTENV_ROOT}/versions/${version}"
+}
+
+if version_exists "${SBTENV_VERSION}"; then
+  echo "${SBTENV_VERSION}"
+elif version_exists "${SBTENV_VERSION#sbt-}"; then
+  { echo "warning: ignoring extraneous \`sbt-\` prefix in version \`${SBTENV_VERSION}\`"
+    echo "         (set by $(sbtenv-version-origin))"
+  } >& 2
+  echo "${SBTENV_VERSION#sbt-}"
+else
+  echo "sbtenv: version \`${SBTENV_VERSION}\` is not installed" >& 2
+  exit 1
+fi
+

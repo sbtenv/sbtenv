@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+# Summary: List all sbt versions that contain the given executable
+# Usage: sbtenv whence [--path] <command>
+
+set -e
+test -n "${SBTENV_DEBUG}" && set -x
+
+# Provide sbtenv completions
+if [ "${1}" = "--complete" ]; then
+  echo --path
+  exec sbtenv shims --short
+fi
+
+if [ "${1}" = "--path" ]; then
+  print_paths="1"
+  shift
+else
+  print_paths=""
+fi
+
+whence() {
+  local command="${1}"
+  sbtenv-versions --bare | while read version; do
+    path="$(sbtenv-prefix "${version}")/bin/${command}"
+    if [ -x "${path}" ]; then
+      test "${print_paths}" && echo "${path}" || echo "${version}"
+    fi
+  done
+}
+
+SBTENV_COMMAND="${1}"
+if [ -z "${SBTENV_COMMAND}" ]; then
+  sbtenv-help --usage whence >& 2
+  exit 1
+fi
+
+result="$(whence "${SBTENV_COMMAND}")"
+test -n "${result}" && echo "${result}"
+

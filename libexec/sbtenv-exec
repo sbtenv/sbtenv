@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+#
+# Summary: Run on executable with the selected sbt version
+#
+# Usage: sbtenv exec <command> [args ...]
+#
+# Runs on executable by first preparing PATH so that the selected sbt
+# version's `bin` directory is at the front.
+
+set -e
+test -n "${SBTENV_DEBUG}" && set -x
+
+# Provide sbtenv completions
+if [ "${1}" = "--complete" ]; then
+  exec sbtenv shims --short
+fi
+
+SBTENV_VERSION="$(sbtenv-version-name)"
+SBTENV_COMMAND="${1}"
+
+if [ -z "${SBTENV_COMMAND}" ]; then
+  sbtenv-help --usage exec >& 2
+  exit 1
+fi
+
+export SBTENV_VERSION
+SBTENV_COMMAND_PATH="$(sbtenv-which "${SBTENV_COMMAND}")"
+SBTENV_BIN_PATH="${SBTENV_COMMAND_PATH%/*}"
+
+OLDIFS="${IFS}"
+IFS=$'\n' scripts=(`sbtenv-hooks exec`)
+IFS="${OLDIFS}"
+for script in "${scripts[@]}"; do
+  source "${script}"
+done
+
+shift 1
+if [ "${SBTENV_VERSION}" != "system" ]; then
+  export PATH="${SBTENV_BIN_PATH}:${PATH}"
+fi
+exec -a "${SBTENV_COMMAND}" "${SBTENV_COMMAND_PATH}" "${@}"
+

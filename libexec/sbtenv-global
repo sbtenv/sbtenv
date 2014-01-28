@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+#
+# Summary: Set or show the global sbt version
+#
+# Usage: sbtenv global <version>
+#
+# Sets the global sbt version. You can override the global version at
+# any time by setting a directory-specific version with `sbtenv local`
+# or by setting the `SBTENV_VERSION` environment variable.
+#
+# <version> should be a string matching a Scala version known to sbtenv.
+# The special version string `system` will use your default system sbt.
+# Run `sbtenv versions` for a list of available Scala versions.
+
+set -e
+test -n "${SBTENV_DEBUG}" && set -x
+
+# Provide sbtenv completions
+if [ "${1}" = "--complete" ]; then
+  echo system
+  exec sbtenv-versions --bare
+fi
+
+SBTENV_VERSION="${1}"
+SBTENV_VERSION_FILE="${SBTENV_ROOT}/version"
+
+if [ -n "${SBTENV_VERSION}" ]; then
+  sbtenv-version-file-write "${SBTENV_VERSION_FILE}" "${SBTENV_VERSION}"
+else
+  sbtenv-version-file-read "${SBTENV_VERSION_FILE}" ||
+    sbtenv-version-file-read "${SBTENV_ROOT}/global" ||
+    sbtenv-version-file-read "${SBTENV_ROOT}/default" ||
+    echo system
+fi
+

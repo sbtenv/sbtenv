@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Summary: Explain how the current sbt version is set
+
+set -e
+test -n "${SBTENV_DEBUG}" && set -x
+
+if [ -n "${SBTENV_VERSION}" ]; then
+  echo "SBTENV_VERSION environment variable"
+else
+  sbtenv-version-file
+fi
+

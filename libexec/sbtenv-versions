@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+# Summary: List all sbt versions available to sbtenv
+# Usage: sbtenv versions [--bare]
+#
+# Lists all sbt versions found in `${SBTENV_ROOT}/versions/*`.
+
+set -e
+test -n "${SBTENV_DEBUG}" && set -x
+
+if [ "${1}" = "--bare" ]; then
+  hit_prefix=""
+  miss_prefix=""
+  current_version=""
+  include_system=""
+else
+  hit_prefix="* "
+  miss_prefix="  "
+  current_version="$(sbtenv-version-name || true)"
+  include_system="1"
+fi
+
+print_version() {
+  if [ "${1}" = "${current_version}" ]; then
+    echo "${hit_prefix}$(sbtenv-version 2> /dev/null)"
+  else
+    echo "${hit_prefix}${1}"
+  fi
+}
+
+# Include "system" in the non-bare output, if it exists
+if [ -n "${include_system}" ] && SBTENV_VERSION=system sbtenv-which sbt > /dev/null 2>&1; then
+  print_version system
+fi
+
+for path in "${SBTENV_ROOT}/versions/"*; do
+  if [ -d "${path}" ]; then
+    print_version "${path##*/}"
+  fi
+done
+

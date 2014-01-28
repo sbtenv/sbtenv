@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# Summary: List existing sbtenv shims
+# Usage: sbtenv shims [--short]
+
+set -e
+test -n "${SBTENV_DEBUG}" && set -x
+
+# Provide sbtenv completions
+if [ "${1}" = "--complete" ]; then
+  echo --short
+  exit
+fi
+
+shopt -s nullglob
+
+for command in "${SBTENV_ROOT}/shims/"*; do
+  if [ "${1}" = "--short" ]; then
+    echo "${command##*/}"
+  else
+    echo "${command}"
+  fi
+done | sort
