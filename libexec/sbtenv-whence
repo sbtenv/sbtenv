@@ -21,7 +21,7 @@ fi
 whence() {
   local command="${1}"
   sbtenv-versions --bare | while read version; do
-    path="$(sbtenv-prefix "${version}")/bin/${command}"
+    path="$(sbtenv-prefix "${version}")/sbt/bin/${command}"
     if [ -x "${path}" ]; then
       test "${print_paths}" && echo "${path}" || echo "${version}"
     fi

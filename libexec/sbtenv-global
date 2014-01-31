@@ -8,9 +8,9 @@
 # any time by setting a directory-specific version with `sbtenv local`
 # or by setting the `SBTENV_VERSION` environment variable.
 #
-# <version> should be a string matching a Scala version known to sbtenv.
+# <version> should be a string matching a sbt version known to sbtenv.
 # The special version string `system` will use your default system sbt.
-# Run `sbtenv versions` for a list of available Scala versions.
+# Run `sbtenv versions` for a list of available sbt versions.
 
 set -e
 test -n "${SBTENV_DEBUG}" && set -x

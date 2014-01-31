@@ -22,9 +22,9 @@ elif [ -z "${SBTENV_VERSION}" ]; then
 fi
 
 if [ "${SBTENV_VERSION}" = "system" ]; then
-  if SCALA_PATH="$(sbtenv-which scala 2> /dev/null)"; then
-    SCALA_PATH="${SCALA_PATH%/*}"
-    echo "${SCALA_PATH%/bin}"
+  if SBT_PATH="$(sbtenv-which sbt 2> /dev/null)"; then
+    SBT_PATH="${SBT_PATH%/*}"
+    echo "${SBT_PATH%/sbt/bin}"
     exit
   else
     echo "sbtenv: system version not found in PATH" >& 2

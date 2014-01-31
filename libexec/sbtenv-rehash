@@ -46,7 +46,7 @@ set -e
 test -n "\${SBTENV_DEBUG}" && set -x
 
 program="\${0##*/}"
-if [ "\${program}" = "scala" ]; then
+if [ "\${program}" = "sbt" ]; then
   for arg; do
     case "\${arg}" in
       -- ) break ;;

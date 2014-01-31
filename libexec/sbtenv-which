@@ -58,7 +58,7 @@ if [ "${SBTENV_VERSION}" = "system" ]; then
   PATH="$(remove_from_path "${SBTENV_ROOT}/shims")"
   SBTENV_COMMAND_PATH="$(command -v "${SBTENV_COMMAND}" || true)"
 else
-  SBTENV_COMMAND_PATH="${SBTENV_ROOT}/versions/${SBTENV_VERSION}/bin/${SBTENV_COMMAND}"
+  SBTENV_COMMAND_PATH="${SBTENV_ROOT}/versions/${SBTENV_VERSION}/sbt/bin/${SBTENV_COMMAND}"
 fi
 
 OLDIFS="${IFS}"
