@@ -49,7 +49,7 @@ Groom your sbt environment.
 
 **0.0.2** (Mar 04, 2014)
 
-  * Added completions for `Z shell` and `Bash`.$
+  * Added completions for `Z shell` and `Bash`.
 
 **0.0.1** (Jan 30, 2014)
 
