@@ -17,8 +17,7 @@ Groom your sbt environment.
     $ echo 'export PATH="${HOME}/.sbtenv/bin:${PATH}"' >> ~/.zshrc
     ~~~
 
-3. Add `sbtenv init` to your shell to enable shims.  
-   (You need autocompletion? Just a little longer...)
+3. Add `sbtenv init` to your shell to enable shims and **autocompletion**.  
 
     ~~~ sh
     $ echo 'eval "$(sbtenv init -)"' >> ~/.zshrc
@@ -34,7 +33,7 @@ Groom your sbt environment.
     #=> "sbtenv is a shell function"
     ~~~
 
-    _Same as in previous step, use `~/.bash_profile` for Bash._
+    *Same as in previous step, use `~/.bash_profile` for Bash.*
 
 5. Download sbt archive and extract into `~/.sbtenv/versions/`.
 
@@ -44,11 +43,15 @@ Groom your sbt environment.
     $ tar xf sbt.tgz -C ~/.sbtenv/versions/sbt-0.13.1/
     ~~~
 
-    _It is only way at present._
+    *It is only way at present.*
 
 ### Version History
 
+**0.0.2** (Mar 04, 2014)
+
+  * Added completions for `Z shell` and `Bash`.$
+
 **0.0.1** (Jan 30, 2014)
 
-* Initial public release.
+  * Initial public release.
 
