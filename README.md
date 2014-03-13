@@ -1,6 +1,8 @@
 sbtenv
 ======
 
+[![Build Status](https://travis-ci.org/mazgi/sbtenv.png?branch=master)](https://travis-ci.org/mazgi/sbtenv)
+
 Groom your sbt environment.
 
 ### Installation
