@@ -49,6 +49,12 @@ Groom your sbt environment.
 
 ### Version History
 
+**0.0.4** (Mar 14, 2014)
+
+  * Added [Travis CI](https://travis-ci.org) status badge on README.
+  * Fixed a bug when run `rehash` subcommand.
+  * Fixed version string.
+
 **0.0.3** (Mar 06, 2014)
 
   * Fixed minor bugs.
