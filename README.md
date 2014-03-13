@@ -1,6 +1,8 @@
 sbtenv
 ======
 
+[![Build Status](https://travis-ci.org/mazgi/sbtenv.png?branch=master)](https://travis-ci.org/mazgi/sbtenv)
+
 Groom your sbt environment.
 
 ### Installation
@@ -46,6 +48,12 @@ Groom your sbt environment.
     *It is only way at present.*
 
 ### Version History
+
+**0.0.4** (Mar 14, 2014)
+
+  * Added [Travis CI](https://travis-ci.org) status badge on README.
+  * Fixed a bug when run `rehash` subcommand.
+  * Fixed version string.
 
 **0.0.3** (Mar 06, 2014)
 
