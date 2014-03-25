@@ -64,6 +64,10 @@ Groom your sbt environment.
 
 ### Version History
 
+**0.0.5** (Mar 25, 2014)
+
+  * Improved installation instruction by *sbt-install* built-in plugin.
+
 **0.0.4** (Mar 14, 2014)
 
   * Added [Travis CI](https://travis-ci.org) status badge on README.
