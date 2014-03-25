@@ -19,7 +19,7 @@ Groom your sbt environment.
     $ echo 'export PATH="${HOME}/.sbtenv/bin:${PATH}"' >> ~/.zshrc
     ~~~
 
-3. Add `sbtenv init` to your shell to enable shims and **autocompletion**.  
+3. Add `sbtenv init` to your shell to enable shims and autocompletion.  
 
     ~~~ sh
     $ echo 'eval "$(sbtenv init -)"' >> ~/.zshrc
@@ -37,7 +37,24 @@ Groom your sbt environment.
 
     *Same as in previous step, use `~/.bash_profile` for Bash.*
 
-5. Download sbt archive and extract into `~/.sbtenv/versions/`.
+5. Install each version of sbt.
+
+    ~~~ sh
+    $ sbtenv install sbt-0.13.1
+    ~~~
+
+    If show all available version, please use the following command:
+
+    ~~~ sh
+    $ sbtenv install -l
+    All available versions:
+    sbt-0.12.1
+    sbt-0.12.2
+    sbt-0.12.3
+    ...
+    ~~~
+
+    If want to install manually, please download sbt archive and extract into `~/.sbtenv/versions/`.
 
     ~~~ sh
     $ curl -LO http://repo.scala-sbt.org/scalasbt/sbt-native-packages/org/scala-sbt/sbt/0.13.1/sbt.tgz
@@ -45,9 +62,11 @@ Groom your sbt environment.
     $ tar xf sbt.tgz -C ~/.sbtenv/versions/sbt-0.13.1/
     ~~~
 
-    *It is only way at present.*
-
 ### Version History
+
+**0.0.5** (Mar 25, 2014)
+
+  * Improved installation instruction by *sbt-install* built-in plugin.
 
 **0.0.4** (Mar 14, 2014)
 
