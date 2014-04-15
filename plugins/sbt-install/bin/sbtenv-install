@@ -34,7 +34,7 @@ abs_dirname() {
 
 SHA1SUM=$(type -p sha1sum shasum | head -1)
 if [ -z "${SHA1SUM}" ]; then
-  echo "scala-install: connot find sha1sum - are you missing GNU coreutils?" >& 2
+  echo "sbt-install: connot find sha1sum - are you missing GNU coreutils?" >& 2
   exit 1
 fi
 
