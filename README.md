@@ -5,6 +5,9 @@ sbtenv
 
 Groom your sbt environment.
 
+Do you need [**Play Framework**](http://www.playframework.com) and [**Scala**](http://www.scala-lang.org) version management?  
+Please refer to [**playenv**](https://github.com/mazgi/playenv) in the case of use **Play Framework**, and [**scalaenv**](https://github.com/mazgi/scalaenv) in the case of use **Scala**.
+
 ### Installation
 
 1. `git clone` sbtenv into `~/.sbtenv`.
@@ -63,6 +66,10 @@ Groom your sbt environment.
     ~~~
 
 ### Version History
+
+**0.0.6** (Apr 15, 2014)
+
+  * Added recipe for *sbt 0.13.2* to *sbt-install* built-in plugin.
 
 **0.0.5** (Mar 25, 2014)
 
