@@ -15,8 +15,17 @@ find_local_version_file() {
   done
 }
 
+find_project_build_properties() {
+  if [ -r "${PWD}/project/build.properties" ]; then
+    echo "${PWD}/project/build.properties"
+    exit
+  fi
+}
+
 find_local_version_file "${SBTENV_DIR}"
 [ "${SBTENV_DIR}" = "${PWD}" ] || find_local_version_file "${PWD}"
+
+find_project_build_properties
 
 global_version_file="${SBTENV_ROOT}/version"
 

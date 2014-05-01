@@ -7,10 +7,18 @@ test -n "${SBTENV_DEBUG}" && set -x
 VERSION_FILE="${1}"
 
 if [ -e "${VERSION_FILE}" ]; then
-  # Read the first non-whitespace word from the specified version file.
-  # Be careful not to load it whole in case there's something crazy in it.
-  words=($(cut -b 1-1024 "${VERSION_FILE}"))
-  version="${words[0]}"
+
+  case "${VERSION_FILE}" in
+    *build.properties)
+      words=($(cut -d = -f 2 "${VERSION_FILE}"))
+      version="sbt-${words[0]}"
+      ;;
+    *)
+      # Read the first non-whitespace word from the specified version file.
+      # Be careful not to load it whole in case there's something crazy in it.
+      words=($(cut -b 1-1024 "${VERSION_FILE}"))
+      version="${words[0]}"
+  esac
 
   if [ -n "${version}" ]; then
     echo "${version}"
