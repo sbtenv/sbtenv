@@ -5,6 +5,11 @@ set -e
 test -n "${SBTENV_DEBUG}" && set -x
 
 if [ -z "${SBTENV_VERSION}" ]; then
+  SBTENV_VERSION_FILE="$(sbtenv-version-project)"
+  SBTENV_VERSION="$(sbtenv-version-project-read "${SBTENV_VERSION_FILE}" || true)"
+fi
+
+if [ -z "${SBTENV_VERSION}" ]; then
   SBTENV_VERSION_FILE="$(sbtenv-version-file)"
   SBTENV_VERSION="$(sbtenv-version-file-read "${SBTENV_VERSION_FILE}" || true)"
 fi
