@@ -67,6 +67,11 @@ Please refer to [**playenv**](https://github.com/mazgi/playenv) in the case of u
 
 ### Version History
 
+**0.0.7** (May 24, 2014)
+
+  * Improved version management: will apply version, if there is a `build.properties` file.
+  * Fixed a bug when run `versions` subcommand.
+
 **0.0.6** (Apr 15, 2014)
 
   * Added recipe for *sbt 0.13.2* to *sbt-install* built-in plugin.
