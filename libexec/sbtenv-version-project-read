@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# Usage: sbtenv version-file-read <file>
+
+set -e
+test -n "${SBTENV_DEBUG}" && set -x
+
+VERSION_FILE="${1}"
+
+if [ -r "${VERSION_FILE}" ]; then
+  words=($(grep -E '^\s*sbt\.version\s*=\s*[0-9\.]+\s*$' "${VERSION_FILE}" 2> /dev/null | head -1 | tr '=' ' '))
+  version="${words[1]}"
+
+  if [ -n "${version}" ]; then
+    echo "sbt-${version}"
+    exit
+  fi
+fi
+
+exit 1
+

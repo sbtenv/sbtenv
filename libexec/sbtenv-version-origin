@@ -7,6 +7,10 @@ test -n "${SBTENV_DEBUG}" && set -x
 if [ -n "${SBTENV_VERSION}" ]; then
   echo "SBTENV_VERSION environment variable"
 else
-  sbtenv-version-file
+  version="$(sbtenv-version-project)"
+  if [ -z "${version}" ]; then
+    version="$(sbtenv-version-file)"
+  fi
+  echo "${version}"
 fi
 
