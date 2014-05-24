@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Summary: Detect the file that sets the current sbtenv version
+
+set -e
+test -n "${SBTENV_DEBUG}" && set -x
+
+find_project_version_file() {
+  local root="${1}"
+  if $(grep -Eq '^\s*sbt\.version\s*=\s*[0-9\.]+\s*$' "${root}/project/build.properties" 2> /dev/null); then
+    echo "${root}/project/build.properties"
+    exit
+  fi
+}
+
+find_project_version_file "${PWD}"
+
