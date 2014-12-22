@@ -102,3 +102,7 @@ Please refer to [**playenv**](https://github.com/mazgi/playenv) in the case of u
 
   * Initial public release.
 
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/mazgi/sbtenv/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
