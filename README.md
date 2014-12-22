@@ -2,6 +2,8 @@ sbtenv
 ======
 
 [![Build Status](https://travis-ci.org/mazgi/sbtenv.png?branch=master)](https://travis-ci.org/mazgi/sbtenv)
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/mazgi/sbtenv/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+[![endorse](https://api.coderwall.com/mazgi/endorsecount.png)](https://coderwall.com/mazgi)
 
 Groom your sbt environment.
 
