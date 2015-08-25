@@ -69,6 +69,11 @@ Please refer to [**playenv**](https://github.com/mazgi/playenv) in the case of u
 
 ### Version History
 
+**0.0.9** (Aug 25, 2015)
+
+  * Added *sbt 0.13.6* - *sbt 0.13.9*  
+    Many thanks to @alexanderscott
+
 **0.0.8** (Aug 06, 2014)
 
   * Added recipe for *sbt 0.13.5* to *sbt-install* built-in plugin.
