@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Usage: sbtenv completions <command> [arg1 arg2...]
 
 set -e
 test -n "${SBTENV_DEBUG}" && set -x
@@ -14,4 +15,3 @@ if grep -iE "^([#%]|--|//) provide sbtenv completions" "${COMMAND_PATH}" > /dev/
   shift
   exec "${COMMAND_PATH}" --complete "${@}"
 fi
-
