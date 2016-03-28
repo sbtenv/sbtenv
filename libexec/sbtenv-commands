@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # Summary: List all avalable sbtenv commands
+# Usage: sbtenv commands [--sh|--no-sh]
 
 set -e
 test -n "${SBTENV_DEBUG}" && set -x
@@ -38,4 +39,3 @@ shopt -s nullglob
   done
 done
 } | sort -u
-
