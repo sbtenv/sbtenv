@@ -69,6 +69,10 @@ Please refer to [**playenv**](https://github.com/mazgi/playenv) in the case of u
 
 ### Version History
 
+**0.0.12** (Dec 26, 2016)
+
+  * Added *sbt 0.13.13*
+
 **0.0.11** (Aug 24, 2016)
 
   * Added *sbt 0.13.12*
