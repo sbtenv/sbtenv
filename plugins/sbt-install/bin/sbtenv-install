@@ -57,7 +57,7 @@ if [ -f "${recipe}" ]; then
     fi
     if [ $? ]; then
       echo "Extracting files..."
-      tar xf "${SBTENV_ROOT}/versions/${version}/${archive_file}" -C "${SBTENV_ROOT}/versions/${version}"
+      tar xf "${SBTENV_ROOT}/versions/${version}/${archive_file}" -C "${SBTENV_ROOT}/versions/${version}" --strip-components=1
       if [ $? ]; then
         rm -f "${SBTENV_ROOT}/versions/${version}/${archive_file}"
         test ! -z "${sha1sum_file}" && rm -f "${SBTENV_ROOT}/versions/${version}/${sha1sum_file}"
