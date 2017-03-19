@@ -1,9 +1,7 @@
 sbtenv
 ======
 
-[![Build Status](https://travis-ci.org/mazgi/sbtenv.png?branch=master)](https://travis-ci.org/mazgi/sbtenv)
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/mazgi/sbtenv/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-[![endorse](https://api.coderwall.com/mazgi/endorsecount.png)](https://coderwall.com/mazgi)
+[![Build Status](https://travis-ci.org/kadaan/sbtenv.png?branch=master)](https://travis-ci.org/kadaan/sbtenv)
 
 Groom your sbt environment.
 
@@ -15,7 +13,7 @@ Please refer to [**playenv**](https://github.com/mazgi/playenv) in the case of u
 1. `git clone` sbtenv into `~/.sbtenv`.
 
     ~~~ sh
-    $ git clone git://github.com/mazgi/sbtenv.git ~/.sbtenv
+    $ git clone git://github.com/kadaan/sbtenv.git ~/.sbtenv
     ~~~
 
 2. Add `~/.sbtenv/bin` to your `$PATH` for access to the `sbtenv` command.
@@ -53,9 +51,9 @@ Please refer to [**playenv**](https://github.com/mazgi/playenv) in the case of u
     ~~~ sh
     $ sbtenv install -l
     All available versions:
-    sbt-0.12.1
-    sbt-0.12.2
-    sbt-0.12.3
+    sbt-0.13.11
+    sbt-0.13.12
+    sbt-0.13.13
     ...
     ~~~
 
