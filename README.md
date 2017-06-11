@@ -5,8 +5,8 @@ sbtenv
 
 Groom your sbt environment.
 
-Do you need [**Play Framework**](http://www.playframework.com) and [**Scala**](http://www.scala-lang.org) version management?  
-Please refer to [**playenv**](https://github.com/sbtenv/playenv) in the case of use **Play Framework**, and [**scalaenv**](https://github.com/sbtenv/scalaenv) in the case of use **Scala**.
+Do you need [**Scala**](http://www.scala-lang.org) version management?  
+Please refer to [**scalaenv**](https://github.com/scalaenv/scalaenv) in the case of use **Scala**.
 
 ### Installation
 
