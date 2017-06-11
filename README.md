@@ -1,21 +1,19 @@
 sbtenv
 ======
 
-[![Build Status](https://travis-ci.org/mazgi/sbtenv.png?branch=master)](https://travis-ci.org/mazgi/sbtenv)
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/mazgi/sbtenv/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-[![endorse](https://api.coderwall.com/mazgi/endorsecount.png)](https://coderwall.com/mazgi)
+[![Build Status](https://travis-ci.org/sbtenv/sbtenv.svg?branch=master)](https://travis-ci.org/sbtenv/sbtenv)
 
 Groom your sbt environment.
 
 Do you need [**Play Framework**](http://www.playframework.com) and [**Scala**](http://www.scala-lang.org) version management?  
-Please refer to [**playenv**](https://github.com/mazgi/playenv) in the case of use **Play Framework**, and [**scalaenv**](https://github.com/mazgi/scalaenv) in the case of use **Scala**.
+Please refer to [**playenv**](https://github.com/sbtenv/playenv) in the case of use **Play Framework**, and [**scalaenv**](https://github.com/sbtenv/scalaenv) in the case of use **Scala**.
 
 ### Installation
 
 1. `git clone` sbtenv into `~/.sbtenv`.
 
     ~~~ sh
-    $ git clone git://github.com/mazgi/sbtenv.git ~/.sbtenv
+    $ git clone git://github.com/sbtenv/sbtenv.git ~/.sbtenv
     ~~~
 
 2. Add `~/.sbtenv/bin` to your `$PATH` for access to the `sbtenv` command.
