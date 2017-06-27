@@ -61,6 +61,8 @@ if [ -f "${recipe}" ]; then
       if [ $? ]; then
         rm -f "${SBTENV_ROOT}/versions/${version}/${archive_file}"
         test ! -z "${sha1sum_file}" && rm -f "${SBTENV_ROOT}/versions/${version}/${sha1sum_file}"
+        # rename extracted dir to `sbt`, some distributions (e.g. 0.13.13) have different names, e.g. sbt-launcher-packaging-0.13.13
+        test ! -d "${SBTENV_ROOT}/versions/${version}/sbt" && mv "${SBTENV_ROOT}/versions/${version}/"sbt* "${SBTENV_ROOT}/versions/${version}/sbt"
       fi
       echo "${version} installed."
       break
