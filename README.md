@@ -67,6 +67,12 @@ Please refer to [**scalaenv**](https://github.com/scalaenv/scalaenv) in the case
 
 ### Version History
 
+0.0.13 (Jun 27, 2017)
+
+  * Added sbt 0.13.15
+  * Added sbt 0.13.14
+  * Fixed an issue with sbt distributions with non-standard folders
+
 **0.0.12** (Dec 26, 2016)
 
   * Added *sbt 0.13.13*
