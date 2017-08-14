@@ -10,7 +10,7 @@ fi
 
 READLINK=$(type -p greadlink readlink | head -1)
 if [ -z "${READLINK}" ]; then
-  echo "sbt-install: connot find readlink - are you missing GNU coreutils?" >& 2
+  echo "sbt-install: cannot find readlink - are you missing GNU coreutils?" >& 2
   exit 1
 fi
 
@@ -34,7 +34,7 @@ abs_dirname() {
 
 SHA1SUM=$(type -p sha1sum shasum | head -1)
 if [ -z "${SHA1SUM}" ]; then
-  echo "sbt-install: connot find sha1sum - are you missing GNU coreutils?" >& 2
+  echo "sbt-install: cannot find sha1sum - are you missing GNU coreutils?" >& 2
   exit 1
 fi
 
