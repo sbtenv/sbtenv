@@ -60,6 +60,9 @@ if [ -z "${print}" ]; then
     zsh )
       profile='~/.zshrc'
       ;;
+    fish )
+      profile='~/.config/fish/config.fish'
+      ;;
     * )
       profile='your profile'
       ;;
@@ -69,6 +72,9 @@ if [ -z "${print}" ]; then
     echo "# the following to \"${profile}\":"
     echo ""
     case "${shell}" in
+      fish )
+        echo 'eval (sbtenv init - | source)'
+        ;;
       * )
         echo 'eval "$(sbtenv init -)"'
         ;;
@@ -83,6 +89,9 @@ mkdir -p "${SBTENV_ROOT}/"{shims,versions}
 
 if [[ ":${PATH}:" != *:"${SBTENV_ROOT}/shims":* ]]; then
   case "${shell}" in
+    fish )
+      echo "set -gx PATH '${SBTENV_ROOT}/shims' \$PATH"
+      ;;
     * )
       echo 'export PATH="'${SBTENV_ROOT}'/shims:${PATH}"'
       ;;
@@ -90,8 +99,12 @@ if [[ ":${PATH}:" != *:"${SBTENV_ROOT}/shims":* ]]; then
 fi
 
 case "${shell}" in
+  fish )
+    echo "set -gx SBTENV_SHELL ${shell}"
+    ;;
   * )
     echo "export SBTENV_SHELL=${shell}"
+    ;;
 esac
 
 completion="${root}/completions/sbtenv.${shell}"
@@ -107,6 +120,21 @@ fi
 
 commands=(`sbtenv-commands --sh`)
 case "${shell}" in
+fish )
+  cat <<EOS
+function sbtenv
+  set command \$argv[1]
+  set -e argv[1]
+
+  switch "\$command"
+  case ${commands[*]}
+    source (sbtenv "sh-\$command" \$argv|psub)
+  case '*'
+    command sbtenv "\$command" \$argv
+  end
+end
+EOS
+  ;;
   * )
     cat <<EOS
  sbtenv() {
@@ -115,6 +143,7 @@ EOS
     ;;
 esac
 
+if [ "$shell" != "fish" ]; then
 IFS="|"
 cat <<EOS
   command="\$1"
@@ -130,4 +159,4 @@ cat <<EOS
   esac
 }
 EOS
-
+fi
