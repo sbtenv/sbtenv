@@ -67,6 +67,11 @@ Please refer to [**scalaenv**](https://github.com/scalaenv/scalaenv) in the case
 
 ### Version History
 
+**0.0.15** (Jul 11, 2018)
+
+  - Support fish shell by [@ikuo-suyama](https://github.com/ikuo-suyama)
+    - [#37](https://github.com/sbtenv/sbtenv/pull/37)
+
 **0.0.14** (Mar 03, 2018)
 
   - Added *sbt 1.0.0* - *sbt 1.1.1*
