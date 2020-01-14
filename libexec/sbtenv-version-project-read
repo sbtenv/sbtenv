@@ -11,7 +11,7 @@ if [ -r "${VERSION_FILE}" ]; then
   version="${words[1]}"
 
   if [ -n "${version}" ]; then
-    echo "sbt-${version}"
+    echo ${version}
     exit
   fi
 fi
