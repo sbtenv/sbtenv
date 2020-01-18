@@ -1,0 +1,12 @@
+- name: Install packages for development
+  apt:
+    pkg:
+      - ca-certificates
+      - curl
+      - dialog
+      - git
+      - gnupg-agent
+      - locales
+      - unzip
+      - zsh
+      - tmux

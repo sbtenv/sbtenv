@@ -2,3 +2,5 @@ shims/
 version
 versions/
 bats/
+.vagrant/
+*.log

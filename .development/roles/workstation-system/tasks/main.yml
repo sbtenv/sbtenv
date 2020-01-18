@@ -1,0 +1,86 @@
+- name: Set sysctl
+  sysctl:
+    name: fs.inotify.max_user_watches
+    value: "524288"
+    sysctl_file: /etc/sysctl.d/fs.conf
+  when:
+    - ansible_distribution == "Gentoo" or ansible_distribution == "Debian"
+
+- name: Set sysctl for Ubuntu
+  sysctl:
+    name: fs.inotify.max_user_watches
+    value: "524288"
+    sysctl_file: /etc/sysctl.d/60-fs.conf
+  when:
+    - ansible_distribution == "Ubuntu"
+
+- name: Save locales
+  copy:
+    content: "en_US.UTF-8 UTF-8"
+    dest: /etc/locale.gen
+- name: Generate locales
+  locale_gen:
+    name: "{{ item }}"
+  with_items:
+    - en_US.UTF-8
+
+- name: Generate locales via devconf
+  debconf:
+    name: locales
+    question: locales/locales_to_be_generated
+    value: en_US.UTF-8 UTF-8
+    vtype: multiselect
+  when:
+    - ansible_distribution == "Debian" or ansible_distribution == "Ubuntu"
+- name: Set default locale to en_US.UTF-8 via devconf
+  debconf:
+    name: locales
+    question: locales/default_environment_locale
+    value: en_US.UTF-8
+    vtype: select
+  when:
+    - ansible_distribution == "Debian" or ansible_distribution == "Ubuntu"
+
+- name: Include Gentoo specific provisioning
+  include_tasks: gentoo.yml
+  when:
+    - ansible_distribution == "Gentoo"
+
+- name: Include Debian 9 specific provisioning
+  include_tasks: debian9.yml
+  when:
+    - ansible_distribution == "Debian"
+    - ansible_distribution_major_version == "9"
+- name: Include Ubuntu 18 specific provisioning
+  include_tasks: ubuntu18.yml
+  when:
+    - ansible_distribution == "Ubuntu"
+    - ansible_distribution_major_version == "18"
+
+- name: Place the files to add the path into the PATH
+  template:
+    src: "default/etc/profile.d/{{ item }}.j2"
+    dest: "/etc/profile.d/{{ item }}"
+    mode: u=rwx,g=rx,o=rx
+  with_items:
+    - locales.sh
+
+- name: Check is bats installed
+  shell: command -v bats > /dev/null
+  register: is_bats_exist
+  ignore_errors: yes
+- name: Install bats
+  when: "is_bats_exist.rc != 0"
+  block:
+    - name: Create temporary directory
+      tempfile:
+        state: directory
+        suffix: bats-installer
+      register: tempfile_for_install_bats
+    - name: Clone bats
+      git:
+        repo: https://github.com/bats-core/bats-core.git
+        dest: "{{ tempfile_for_install_bats.path }}"
+      when: tempfile_for_install_bats.path is defined
+    - name: Run bats install script
+      shell: "{{ tempfile_for_install_bats.path }}/install.sh /usr/local"

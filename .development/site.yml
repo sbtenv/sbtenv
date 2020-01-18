@@ -1,0 +1,5 @@
+- name: Setup my workstation
+  hosts: all
+  roles:
+    - role: workstation-system
+      become: true
