@@ -1,0 +1,30 @@
+- name: Copy files for Gentoo
+  copy:
+    src: gentoo/
+    dest: /
+    mode: u=rw,g=r,o=r
+
+- name: Place the file to apply LICENSE flags for sys-kernel/linux-firmware
+  template:
+    src: gentoo/etc/portage/package.license/sys-kernel.linux-firmware.use.j2
+    dest: /etc/portage/package.license/sys-kernel.linux-firmware.use
+    mode: u=rw,g=r,o=r
+
+- name: Install basic packages
+  portage:
+    package: "{{ item }}"
+    update: yes
+  with_items:
+    - app-admin/sudo
+    - app-portage/eix
+    - app-portage/gentoolkit
+    - net-dns/bind-tools
+
+- name: Install packages for development
+  portage:
+    package: "{{ item }}"
+    update: yes
+  with_items:
+    - dev-vcs/git
+    - app-misc/tmux
+    - app-shells/zsh
