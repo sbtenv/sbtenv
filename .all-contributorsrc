@@ -14,6 +14,15 @@
         "maintenance",
         "code"
       ]
+    },
+    {
+      "login": "alexanderscott",
+      "name": "Alex Ehrnschwender",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/2118299?v=4",
+      "profile": "https://ehrns.com",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
