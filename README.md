@@ -1,6 +1,6 @@
 sbtenv
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-15-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-16-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 ======
 
@@ -169,6 +169,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/zerosum"><img src="https://avatars1.githubusercontent.com/u/345161?v=4" width="100px;" alt=""/><br /><sub><b>TAKAHASHI Osamu</b></sub></a><br /><a href="https://github.com/sbtenv/sbtenv/commits?author=zerosum" title="Code">💻</a></td>
+    <td align="center"><a href="https://pthariensflame.wordpress.com"><img src="https://avatars1.githubusercontent.com/u/1847577?v=4" width="100px;" alt=""/><br /><sub><b>Alexander Ronald Altman</b></sub></a><br /><a href="https://github.com/sbtenv/sbtenv/commits?author=pthariensflame" title="Code">💻</a></td>
   </tr>
 </table>
 
