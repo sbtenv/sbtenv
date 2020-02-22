@@ -14,6 +14,15 @@
         "maintenance",
         "code"
       ]
+    },
+    {
+      "login": "j1mr10rd4n",
+      "name": "Jim Riordan",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/946427?v=4",
+      "profile": "https://github.com/j1mr10rd4n",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
