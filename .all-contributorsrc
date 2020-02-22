@@ -122,6 +122,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "kaave",
+      "name": "Kyousuke Abe",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/16093318?v=4",
+      "profile": "https://kaave.github.io/",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
