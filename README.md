@@ -1,6 +1,6 @@
 sbtenv
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 ======
 
@@ -157,6 +157,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/sungkmi"><img src="https://avatars0.githubusercontent.com/u/3403684?v=4" width="100px;" alt=""/><br /><sub><b>sungkmi</b></sub></a><br /><a href="https://github.com/sbtenv/sbtenv/commits?author=sungkmi" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/j1mr10rd4n"><img src="https://avatars2.githubusercontent.com/u/946427?v=4" width="100px;" alt=""/><br /><sub><b>Jim Riordan</b></sub></a><br /><a href="https://github.com/sbtenv/sbtenv/commits?author=j1mr10rd4n" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/jeffwilde"><img src="https://avatars0.githubusercontent.com/u/6980603?v=4" width="100px;" alt=""/><br /><sub><b>Jeff Wilde</b></sub></a><br /><a href="https://github.com/sbtenv/sbtenv/commits?author=jeffwilde" title="Code">💻</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://www.sslife.tech/"><img src="https://avatars3.githubusercontent.com/u/21254456?v=4" width="100px;" alt=""/><br /><sub><b>sawadashota</b></sub></a><br /><a href="https://github.com/sbtenv/sbtenv/commits?author=sawadashota" title="Code">💻</a></td>
   </tr>
 </table>
 
