@@ -1,6 +1,6 @@
 sbtenv
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 ======
 
@@ -151,6 +151,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://mazgi.github.io/"><img src="https://avatars2.githubusercontent.com/u/194222?v=4" width="100px;" alt=""/><br /><sub><b>Matsuki, Hidenori</b></sub></a><br /><a href="#maintenance-mazgi" title="Maintenance">🚧</a> <a href="https://github.com/sbtenv/sbtenv/commits?author=mazgi" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/j1mr10rd4n"><img src="https://avatars2.githubusercontent.com/u/946427?v=4" width="100px;" alt=""/><br /><sub><b>Jim Riordan</b></sub></a><br /><a href="https://github.com/sbtenv/sbtenv/commits?author=j1mr10rd4n" title="Code">💻</a></td>
   </tr>
 </table>
 
