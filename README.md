@@ -151,6 +151,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://mazgi.github.io/"><img src="https://avatars2.githubusercontent.com/u/194222?v=4" width="100px;" alt=""/><br /><sub><b>Matsuki, Hidenori</b></sub></a><br /><a href="#maintenance-mazgi" title="Maintenance">🚧</a> <a href="https://github.com/sbtenv/sbtenv/commits?author=mazgi" title="Code">💻</a></td>
+    <td align="center"><a href="https://www.zaneli.com/"><img src="https://avatars2.githubusercontent.com/u/379820?v=4" width="100px;" alt=""/><br /><sub><b>Shunsuke Otani</b></sub></a><br /><a href="https://github.com/sbtenv/sbtenv/commits?author=zaneli" title="Code">💻</a></td>
+    <td align="center"><a href="https://ehrns.com"><img src="https://avatars2.githubusercontent.com/u/2118299?v=4" width="100px;" alt=""/><br /><sub><b>Alex Ehrnschwender</b></sub></a><br /><a href="https://github.com/sbtenv/sbtenv/commits?author=alexanderscott" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/TomRegan"><img src="https://avatars3.githubusercontent.com/u/235364?v=4" width="100px;" alt=""/><br /><sub><b>Tom Regan</b></sub></a><br /><a href="https://github.com/sbtenv/sbtenv/commits?author=TomRegan" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/sungkmi"><img src="https://avatars0.githubusercontent.com/u/3403684?v=4" width="100px;" alt=""/><br /><sub><b>sungkmi</b></sub></a><br /><a href="https://github.com/sbtenv/sbtenv/commits?author=sungkmi" title="Code">💻</a></td>
   </tr>
 </table>
