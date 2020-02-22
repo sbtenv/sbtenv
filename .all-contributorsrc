@@ -131,6 +131,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "zerosum",
+      "name": "TAKAHASHI Osamu",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/345161?v=4",
+      "profile": "https://github.com/zerosum",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
