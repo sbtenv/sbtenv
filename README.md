@@ -155,6 +155,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://ehrns.com"><img src="https://avatars2.githubusercontent.com/u/2118299?v=4" width="100px;" alt=""/><br /><sub><b>Alex Ehrnschwender</b></sub></a><br /><a href="https://github.com/sbtenv/sbtenv/commits?author=alexanderscott" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/TomRegan"><img src="https://avatars3.githubusercontent.com/u/235364?v=4" width="100px;" alt=""/><br /><sub><b>Tom Regan</b></sub></a><br /><a href="https://github.com/sbtenv/sbtenv/commits?author=TomRegan" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/sungkmi"><img src="https://avatars0.githubusercontent.com/u/3403684?v=4" width="100px;" alt=""/><br /><sub><b>sungkmi</b></sub></a><br /><a href="https://github.com/sbtenv/sbtenv/commits?author=sungkmi" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/j1mr10rd4n"><img src="https://avatars2.githubusercontent.com/u/946427?v=4" width="100px;" alt=""/><br /><sub><b>Jim Riordan</b></sub></a><br /><a href="https://github.com/sbtenv/sbtenv/commits?author=j1mr10rd4n" title="Code">💻</a></td>
   </tr>
 </table>
 
