@@ -1,6 +1,6 @@
 sbtenv
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-14-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-15-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 ======
 
@@ -166,6 +166,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://kemuridama.jp"><img src="https://avatars2.githubusercontent.com/u/10277857?v=4" width="100px;" alt=""/><br /><sub><b>Ryo Ochiai</b></sub></a><br /><a href="https://github.com/sbtenv/sbtenv/commits?author=kemuridama" title="Code">💻</a></td>
     <td align="center"><a href="http://twitter.com/bussorenre"><img src="https://avatars2.githubusercontent.com/u/1981389?v=4" width="100px;" alt=""/><br /><sub><b>Ryo Matsumoto</b></sub></a><br /><a href="https://github.com/sbtenv/sbtenv/commits?author=bussorenre" title="Code">💻</a></td>
     <td align="center"><a href="https://kaave.github.io/"><img src="https://avatars1.githubusercontent.com/u/16093318?v=4" width="100px;" alt=""/><br /><sub><b>Kyousuke Abe</b></sub></a><br /><a href="https://github.com/sbtenv/sbtenv/commits?author=kaave" title="Code">💻</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/zerosum"><img src="https://avatars1.githubusercontent.com/u/345161?v=4" width="100px;" alt=""/><br /><sub><b>TAKAHASHI Osamu</b></sub></a><br /><a href="https://github.com/sbtenv/sbtenv/commits?author=zerosum" title="Code">💻</a></td>
   </tr>
 </table>
 
