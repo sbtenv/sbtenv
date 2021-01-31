@@ -71,6 +71,14 @@ Please refer to [**scalaenv**](https://github.com/scalaenv/scalaenv) in the case
 
 ### Version History
 
+**0.0.17** (Jan 31, 2021)
+  - Added *sbt-1.4.7*
+    - [#76](https://github.com/sbtenv/sbtenv/pull/76)
+
+**0.0.16** (Jan 5, 2021)
+  - Added *sbt-1.4.5*, *sbt-1.4.6* and all *dotty* releases
+    - [#75](https://github.com/sbtenv/sbtenv/pull/75)
+
 **0.0.15** (Jul 11, 2018)
 
   - Support fish shell by [@ikuo-suyama](https://github.com/ikuo-suyama)
