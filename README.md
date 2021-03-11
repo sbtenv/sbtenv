@@ -73,7 +73,7 @@ Please refer to [**scalaenv**](https://github.com/scalaenv/scalaenv) in the case
 
 **0.0.19** (Mar 11, 2021)
   - Added *sbt-1.4.9*
-    - [#77](https://github.com/sbtenv/sbtenv/pull/78)
+    - [#78](https://github.com/sbtenv/sbtenv/pull/78)
 
 **0.0.18** (Mar 8, 2021)
   - Added *sbt-1.4.8*
