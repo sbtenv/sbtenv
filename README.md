@@ -71,9 +71,13 @@ Please refer to [**scalaenv**](https://github.com/scalaenv/scalaenv) in the case
 
 ### Version History
 
+**0.0.21** (Mar 22, 2021)
+  - Added *sbt-1.5.0-RC2*
+    - [#80](https://github.com/sbtenv/sbtenv/pull/80)
+
 **0.0.20** (Mar 16, 2021)
   - Added *sbt-1.5.0-RC1*
-    - [#78](https://github.com/sbtenv/sbtenv/pull/79)
+    - [#79](https://github.com/sbtenv/sbtenv/pull/79)
 
 **0.0.19** (Mar 11, 2021)
   - Added *sbt-1.4.9*
