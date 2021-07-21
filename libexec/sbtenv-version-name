@@ -27,7 +27,8 @@ version_exists() {
 if version_exists "${SBTENV_VERSION}"; then
   echo "${SBTENV_VERSION}"
 elif version_exists "${SBTENV_VERSION#sbt-}"; then
-  { echo "warning: ignoring extraneous \`sbt-\` prefix in version \`${SBTENV_VERSION}\`"
+  [[ -v SUPPRESS_EXTRANEOUS_PREFIX_WARNING ]] || {
+    echo "warning: ignoring extraneous \`sbt-\` prefix in version \`${SBTENV_VERSION}\`"
     echo "         (set by $(sbtenv-version-origin))"
   } >& 2
   echo "${SBTENV_VERSION#sbt-}"
