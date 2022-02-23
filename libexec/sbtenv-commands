@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Summary: List all avalable sbtenv commands
+# Summary: List all available sbtenv commands
 # Usage: sbtenv commands [--sh|--no-sh]
 
 set -e
